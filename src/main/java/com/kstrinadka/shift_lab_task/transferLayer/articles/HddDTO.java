@@ -1,2 +1,7 @@
-package com.kstrinadka.shift_lab_task.transferLayer;public class HddDTO {
+package com.kstrinadka.shift_lab_task.transferLayer.articles;
+
+
+
+public record HddDTO(Long id, String type, String serial, String manufacturer,
+                     String cost, String amount, String capacity) {
 }
