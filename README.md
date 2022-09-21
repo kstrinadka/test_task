@@ -48,6 +48,8 @@
 Основной сущностью товара является **ShopEntity**, от которой наследуются сущности
 конкретных товаров: **HddEntity**, **LaptopEntity**, **PcEntity**, **ScreenEntity**
 
+![DB_scheme](https://github.com/kstrinadka/test_task/tree/master/src/main/resources/static/DB_scheme.PNG)
+
 Используется Одна таблица для каждого подкласса, 
 где отношение “is a” представлено в виде «has a»,
 т.е. – связь по внешнему ключу с использованием JOIN.
