@@ -34,7 +34,7 @@ public class HddController {
     }
 
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/{id}")
     private void deleteHdd(@PathVariable(name = "id") Long id) {
         hddService.delete(id);
     }

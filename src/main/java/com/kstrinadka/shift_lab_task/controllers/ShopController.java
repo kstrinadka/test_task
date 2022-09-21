@@ -39,34 +39,6 @@ public class ShopController {
     }
 
 
-    @PostMapping("/addlist")
-    @ResponseBody
-    public String addShopList (@RequestBody List<ShopDTO> shopDTOList) {
-
-        for(ShopDTO shopDTO: shopDTOList){
-            shopService.saveOrUpdate(shopDtoToEntity(shopDTO));
-        }
-
-        return "article added to database";
-    }
-
-    @PostMapping("/add")
-    @ResponseBody
-    public String addShop (@RequestBody ShopDTO shopDTO) {
-
-        shopService.saveOrUpdate(shopDtoToEntity(shopDTO));
-
-        return "hdd added to database";
-    }
-
-
-    @PutMapping ( "/update/{id}")
-    @ResponseBody
-    public ShopDTO update(@PathVariable(name = "id") Long id, @RequestBody ShopDTO update) {
-        return shopService.update(id, update);
-    }
-
-
     private ShopEntity shopDtoToEntity(ShopDTO shopDTO){
         ShopEntity shopEntity = new ShopEntity();
 
